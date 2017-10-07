@@ -1,0 +1,102 @@
+
+	Question 2: 	Do question # 1 found on:
+ 
+					http://www.usna.edu/Users/cs/wcbrown/courses/S11IC211/classes/L12/HW/Homework.html
+
+					Instead of picking the letters A, B, C... tell me what is printed on the 
+					screen, or which method is being called etc. Make sure your answers are 
+					correct. If you're confused, write the program & test it out. 
+
+					Format your homework properly so it's easy to read/find your answers for 
+					each part.
+	
+
+			HOMEWORK 6 QUESTION 2
+	
+	a.	Dog d = new Dog();
+		System.out.println(d.call(3));
+		
+		the method in the Dog file gets called and prints 
+		Woof, woof, woof!
+		"Woof" is stored in s.
+		i is 1, gets incremented once since k = 3 and i < k.
+		Once the loop is done, "!" is added to s.
+		
+	
+	
+	b. 	Object c = new Cat();
+		System.out.println(c);
+	
+		"I'm a cat go away!"  gets printed onto the screen.
+		Therefore the parameterless method toString() in cat
+		gets called.  This is an example of overriding.
+		
+	
+	
+	c.	 Object v = new Pet();
+		 System.out.println(v.call());
+	
+		Error trying to call call() in Pet class.
+		Must add a (Pet) cast to v when calling in order
+		to print "!!!" on the screen:
+		System.out.println(((Pet) v).call()); is correct.
+		
+		
+		
+	d.	Pet p = new Pet();
+		System.out.println(p);
+	
+		The Pet class' location in memory gets printed to the screen:
+		Pet@15db9742
+		
+		
+		
+		
+	e.	Pet q = new Dog();
+		System.out.println(q.call());
+	
+		"woof!" gets printed on the screen.
+		a new Dog object is created from the Pet q variable
+		and then q  goes into the Dog class and calls the call()
+		method.  This is an example of polymorphism.
+		
+		
+		
+		
+	f.	Cat t = new Cat();
+		System.out.println(t.toString("Come here, kitty"));
+	
+		the reference to Cat, t, is created, and then 
+		overloads the toString method in the Cat class.
+		Therefore, "Come here, kitty? ... Don't waste my time."
+		gets printed onto the screen.
+		
+		
+		
+		
+	g. 	Cat u = new Cat();
+		System.out.println(u.call(3));
+	
+		Error.  No method in class Cat takes an int argument.
+	
+	
+	
+	
+	h.	Dog e = new Dog();
+		System.out.println(e.feet());
+	
+		"four" gets printed onto the screen.
+		There isn't a feet() method in Dog class, so, because
+		of inheritance, the Pet class gets checked for a feet()
+		method.  Since it exists, it gets called.
+		
+	
+	
+	
+	
+	i.	Pet r = new Dog();
+		System.out.println(r.call(3)); 
+	 	
+	 	This prints an error message because the reference r
+	 	tries to find the method call() in the Pet class, however,
+	 	call() doesn't take an integer argument in Pet.
